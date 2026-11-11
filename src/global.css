@@ -1,9 +1,77 @@
-:root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+@import 'tailwindcss';
+@import 'uniwind';
+
+/*
+ * TaskFlow design tokens.
+ * Brand: calm indigo with a teal accent, soft surfaces and generous radii.
+ */
+@theme {
+  --color-brand-50: #eef0ff;
+  --color-brand-100: #e0e3ff;
+  --color-brand-200: #c7ccff;
+  --color-brand-300: #a5acff;
+  --color-brand-400: #8287fb;
+  --color-brand-500: #5b5bd6;
+  --color-brand-600: #4a45bd;
+  --color-brand-700: #3c379c;
+  --color-brand-800: #322f7d;
+  --color-brand-900: #292764;
+
+  --color-mint-50: #ecfdf7;
+  --color-mint-100: #d1fae9;
+  --color-mint-200: #a7f3d5;
+  --color-mint-300: #6ee7bd;
+  --color-mint-400: #34d39f;
+  --color-mint-500: #14b8a6;
+  --color-mint-600: #0d9488;
+  --color-mint-700: #0f766e;
+
+  --radius-card: 24px;
+  --radius-field: 16px;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-background: #f5f6fb;
+      --color-surface: #ffffff;
+      --color-surface-muted: #eef0f7;
+      --color-foreground: #17172b;
+      --color-foreground-muted: #6b7080;
+      --color-border: #e4e6ef;
+      --color-primary: #5b5bd6;
+      --color-primary-strong: #4a45bd;
+      --color-primary-soft: #eef0ff;
+      --color-accent: #14b8a6;
+      --color-accent-soft: #d1fae9;
+      --color-success: #059669;
+      --color-success-soft: #d1fae5;
+      --color-danger: #dc2626;
+      --color-danger-soft: #fee2e2;
+      --color-warning: #b45309;
+      --color-warning-soft: #fef3c7;
+      --color-overlay: rgba(23, 23, 43, 0.45);
+    }
+
+    @variant dark {
+      --color-background: #0c0d16;
+      --color-surface: #151725;
+      --color-surface-muted: #1d2032;
+      --color-foreground: #f4f5fb;
+      --color-foreground-muted: #9ba1b5;
+      --color-border: #282c40;
+      --color-primary: #8b8cf7;
+      --color-primary-strong: #a5a6ff;
+      --color-primary-soft: #232449;
+      --color-accent: #2dd4bf;
+      --color-accent-soft: #103a37;
+      --color-success: #34d399;
+      --color-success-soft: #0d3328;
+      --color-danger: #f87171;
+      --color-danger-soft: #3d1717;
+      --color-warning: #fbbf24;
+      --color-warning-soft: #3a2a0a;
+      --color-overlay: rgba(0, 0, 0, 0.65);
+    }
+  }
 }
